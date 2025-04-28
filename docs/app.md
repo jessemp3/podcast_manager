@@ -18,7 +18,7 @@
 - Listar os ep's podcasts em sessões de categorias
 
 ### Como vou implementar 
-- Vou retornar em uma api rest (json)
+- GET: Vou retornar em uma api rest (json)
     - O nome do podcast
     - O episodio
     - O id do video
