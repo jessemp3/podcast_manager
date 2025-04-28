@@ -1,9 +1,9 @@
 import * as http from 'http';
-import {getListEpisoddes} from "./controllers/podcastsConstroller"
+import {getListEpisodes} from "./controllers/podcastsConstroller"
 
 const server = http.createServer( async (req: http.IncomingMessage , res:http.ServerResponse) => {
     if(req.method == "GET"){
-      await getListEpisoddes(req, res);
+      await getListEpisodes(req, res);
     }
 })
 
