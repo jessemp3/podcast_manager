@@ -8,7 +8,7 @@
 ### Features
 
 - Listar os ep's podcasts em sessões de categorias
-    - Saúde , fitness , mentalidade , humor
+    - Saúde , fitness , mentalidade , humor , tecnologia
 - Filtrar ep's por nome de podcasts
 
 
