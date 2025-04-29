@@ -45,3 +45,8 @@
     }
 ]
 ```
+
+- Filtrar ep's por nome de podcasts
+
+### Como vou implementar 
+- GET: Retornar lista de episodios baseado em um parametro enviado pelo cliente do nome do podcast
