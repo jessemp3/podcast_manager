@@ -14,7 +14,7 @@
 
 ### Como fazer
 
-#### Feature: 
+#### Features: 
 - Listar os ep's podcasts em sessões de categorias
 
 ### Como vou implementar 
