@@ -1,6 +1,7 @@
 import * as http from 'http';
 import {getFilterEpisodes, getListEpisodes} from "./controllers/podcastsConstroller"
-import { log } from 'console';
+import { Routes } from './routes/routes';
+import { httpMethods } from './utils/httpMethods';
 
 const server = http.createServer( async (req: http.IncomingMessage , res:http.ServerResponse) => {
     //query string
@@ -10,11 +11,11 @@ const server = http.createServer( async (req: http.IncomingMessage , res:http.Se
     console.log(`${queryString}`);
     
 
-    if(req.method === "GET" && baseUrl === "/api/list"){
+    if(req.method === httpMethods.GET && baseUrl === Routes.LIST){
       await getListEpisodes(req, res);
     }
 
-    if(req.method === "GET" && baseUrl === "/api/episode"){
+    if(req.method === httpMethods.GET && baseUrl === Routes.EPISODE){
         await getFilterEpisodes(req, res);
     }
 })
