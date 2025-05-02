@@ -3,20 +3,20 @@ import {getFilterEpisodes, getListEpisodes} from "./controllers/podcastsConstrol
 import { Routes } from './routes/routes';
 import { httpMethods } from './utils/httpMethods';
 
-const server = http.createServer( async (req: http.IncomingMessage , res:http.ServerResponse) => {
+const server = http.createServer( async (request: http.IncomingMessage , response:http.ServerResponse) => {
     //query string
-    const [baseUrl , queryString] = req.url?.split("?") || []
+    const [baseUrl , queryString] = request.url?.split("?") || []
 
     console.log(`${baseUrl}`);
     console.log(`${queryString}`);
     
 
-    if(req.method === httpMethods.GET && baseUrl === Routes.LIST){
-      await getListEpisodes(req, res);
+    if(request.method === httpMethods.GET && baseUrl === Routes.LIST){
+      await getListEpisodes(request, response);
     }
 
-    if(req.method === httpMethods.GET && baseUrl === Routes.EPISODE){
-        await getFilterEpisodes(req, res);
+    if(request.method === httpMethods.GET && baseUrl === Routes.EPISODE){
+        await getFilterEpisodes(request, response);
     }
 })
 
