@@ -4,6 +4,4 @@ export enum httpMethods {
     PUT = 'PUT',
     DELETE = 'DELETE',
     PATCH = 'PATCH',
-
-
 }
